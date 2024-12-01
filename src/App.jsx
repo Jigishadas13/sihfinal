@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
+import IndiaMap from "./components/IndiaMap";
 
 const App = () => {
   return (
@@ -24,8 +25,25 @@ const App = () => {
           </p>
         </div>
       </div>
+
+      {/* Map Section */}
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
+        <div
+          style={{
+            flex: "0 0 60%", // 60% of the parent width
+            aspectRatio: "1", // Square frame
+           
+            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            borderRadius: "10px",
+            overflow: "hidden",
+          }}
+        >
+          <IndiaMap />
+        </div>
+      </div>
     </div>
   );
 };
 
 export default App;
+
